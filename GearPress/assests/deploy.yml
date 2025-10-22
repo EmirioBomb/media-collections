@@ -1,0 +1,59 @@
+name: deploy
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'  # 忽略对 markdown 文件的更改
+      - '.github/workflows/*.yml'  # 忽略对部署脚本的更改
+      - '.DS_Store'  # 忽略对 macOS 系统文件的更改
+  workflow_dispatch:
+
+jobs:
+  docs:
+    if: false
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+        # 切换工作目录位置
+        working-directory: ./kira/docs
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # 选择要使用的 node 版本
+          node-version: 22
+
+
+      # 安装依赖
+      # Install dependencies
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+
+      # 运行构建脚本
+      # Run the build script
+      - name: Build VuePress site
+        run: pnpm run docs:build
+
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: gh-pages
+          # 部署目录为 VuePress 的默认输出目录
+          build_dir: kira/docs/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
