@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="290" height="255" viewBox="-10 -20 300 300" style="overflow: visible;">
   <g transform="matrix(0.5692961203977601, 0, 0, 0.5692961203977601, -26.18761719491225, -110.9170481170928)" data-uid="o-2af4fdd954684854b9e25248c7265af5" fill="#5086a1" stroke="none">
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89" width="595.28" height="841.89" data-uid="o-3852495602eb4f89988374d65a2ab428">
+
       <defs>
         <!-- 定义发光滤镜 -->
         <filter id="glow" x="-30%" y="-30%" width="200%" height="200%" filterUnits="objectBoundingBox">
@@ -15,6 +16,97 @@
           </feMerge>
         </filter>
       </defs>
+
+      <style>
+        @keyframes rainbow {
+          0%     { fill: #00a98e; }
+          1.25%  { fill: #00a996; }
+          1.25%  { fill: #00a996; }
+          2.5%   { fill: #00a99f; }
+          3.75%  { fill: #00a9a7; }
+          5%     { fill: #00a9b0; }
+          6.25%  { fill: #00a9b8; }
+          7.5%   { fill: #00a9c0; }
+          8.75%  { fill: #00a8c7; }
+          10%    { fill: #00a8cf; }
+          11.25% { fill: #00a7d5; }
+          12.5%  { fill: #00a6dc; }
+          13.75% { fill: #00a6e2; }
+          15%    { fill: #00a4e7; }
+          16.25% { fill: #00a3ec; }
+          17.5%  { fill: #00a2f1; }
+          18.75% { fill: #00a0f4; }
+          20%    { fill: #009ff7; }
+          21.25% { fill: #009dfa; }
+          22.5%  { fill: #009bfc; }
+          23.75% { fill: #0098fd; }
+          25%    { fill: #0096fd; }
+          26.25% { fill: #0093fd; }
+          27.5%  { fill: #2e90fc; }
+          28.75% { fill: #4d8dfa; }
+          30%    { fill: #638af8; }
+          31.25% { fill: #7587f5; }
+          32.5%  { fill: #8583f1; }
+          33.75% { fill: #9280ed; }
+          35%    { fill: #9f7ce9; }
+          36.25% { fill: #aa78e3; }
+          37.5%  { fill: #b574dd; }
+          38.75% { fill: #be71d7; }
+          40%    { fill: #c76dd1; }
+          41.25% { fill: #cf69c9; }
+          42.5%  { fill: #d566c2; }
+          43.75% { fill: #dc63ba; }
+          45%    { fill: #e160b3; }
+          46.25% { fill: #e65eab; }
+          47.5%  { fill: #e95ca2; }
+          48.75% { fill: #ed5a9a; }
+          50%    { fill: #ef5992; }
+          51.25% { fill: #f15989; }
+          52.5%  { fill: #f25981; }
+          53.75% { fill: #f25a79; }
+          55%    { fill: #f25c71; }
+          56.25% { fill: #f15e69; }
+          57.5%  { fill: #ef6061; }
+          58.75% { fill: #ed635a; }
+          60%    { fill: #eb6552; }
+          61.25% { fill: #e8694b; }
+          62.5%  { fill: #e46c44; }
+          63.75% { fill: #e06f3d; }
+          65%    { fill: #db7336; }
+          66.25% { fill: #d77630; }
+          67.5%  { fill: #d17a2a; }
+          68.75% { fill: #cc7d24; }
+          70%    { fill: #c6811e; }
+          71.25% { fill: #bf8418; }
+          72.5%  { fill: #b98713; }
+          73.75% { fill: #b28a0f; }
+          75%    { fill: #ab8d0c; }
+          76.25% { fill: #a3900b; }
+          77.5%  { fill: #9c920d; }
+          78.75% { fill: #949510; }
+          80%    { fill: #8b9715; }
+          81.25% { fill: #83991b; }
+          82.5%  { fill: #7a9b21; }
+          83.75% { fill: #719d27; }
+          85%    { fill: #679e2e; }
+          86.25% { fill: #5da035; }
+          87.5%  { fill: #51a13c; }
+          88.75% { fill: #44a244; }
+          90%    { fill: #34a44b; }
+          91.25% { fill: #1ba553; }
+          92.5%  { fill: #00a65b; }
+          93.75% { fill: #00a663; }
+          95%    { fill: #00a76c; }
+          96.25% { fill: #00a874; }
+          97.5%  { fill: #00a87d; }
+          98.75% { fill: #00a985; }
+          100%   { fill: #00a98e; }
+        }
+
+        g[filter="url(#glow)"] path {
+          animation: rainbow 10s linear infinite;
+        }
+      </style>
 
       <g data-uid="o-260893cd57fa4403a951ba0aa844e36c" filter="url(#glow)">
         <g data-uid="o-6ec6d8a48019492d906c0e3801d6a9a6">
