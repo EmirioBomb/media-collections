@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 350 60"
+     width="350"
+     height="60">
+
+  <!-- optional font fallback -->
+  <style>
+    text {
+      font-family: 'Archivo Black', Arial, sans-serif;
+    }
+  </style>
+
+  <!-- animation path -->
+  <path id="path0">
+    <animate
+      id="d0"
+      attributeName="d"
+      begin="0s;d0.end"
+      dur="6s"
+      fill="remove"
+      values="
+        m0,30 h0;
+        m0,30 h350;
+        m0,30 h350;
+        m0,30 h0
+      "
+      keyTimes="0;0.66;0.83;1"
+    />
+  </path>
+
+  <!-- text -->
+  <text
+    font-size="26"
+    font-weight="900"
+    fill="#6AA1B7"
+    dominant-baseline="middle"
+    text-anchor="start"
+
+    stroke="#6AA1B7"
+    stroke-width="1.2"
+    paint-order="stroke fill"
+    letter-spacing="0.5"
+  >
+    <textPath xlink:href="#path0">
+      Hi, My name is Emirio !
+    </textPath>
+  </text>
+
+</svg>
